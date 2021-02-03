@@ -8,6 +8,8 @@ public class Maze {
     public static final int HEIGHT = WIDTH;
     public static final int CELLSIZE = 20;
 
+    public JFrame frame;
+
     public static Cell[][] grid = new Cell[WIDTH/CELLSIZE][WIDTH/CELLSIZE];
 
     public Maze() {
@@ -15,7 +17,7 @@ public class Maze {
     }
 
     public void createAndShowGui() {
-        JFrame frame = new JFrame("Maze");
+        frame = new JFrame("Maze");
         MazePanel mazePanel = new MazePanel();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(mazePanel);
